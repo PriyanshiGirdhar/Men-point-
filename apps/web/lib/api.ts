@@ -64,7 +64,8 @@ interface RequestOptions {
 }
 
 function buildUrl(path: string, query?: RequestOptions['query']) {
-  const url = new URL(`${API_URL}${path}`);
+  const raw = `${API_URL}${path}`;
+  const url = raw.startsWith('http') ? new URL(raw) : new URL(raw, 'http://local');
   if (query) {
     for (const [key, value] of Object.entries(query)) {
       if (value === undefined || value === null || value === '') continue;
@@ -75,7 +76,8 @@ function buildUrl(path: string, query?: RequestOptions['query']) {
       }
     }
   }
-  return url.toString();
+  if (raw.startsWith('http')) return url.toString();
+  return `${url.pathname}${url.search}`;
 }
 
 async function request<T>(
