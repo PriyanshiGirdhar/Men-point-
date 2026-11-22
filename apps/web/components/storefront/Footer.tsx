@@ -23,7 +23,7 @@ const COLUMNS = [
   {
     heading: 'Company',
     links: [
-      { label: 'About Clothify', href: '#' },
+      { label: "About Men's point", href: '#' },
       { label: 'Careers', href: '#' },
       { label: 'Sustainability', href: '#' },
     ],
@@ -38,7 +38,7 @@ export function Footer() {
     <footer className="bg-charcoal-900 text-cream/90 mt-20">
       <div className="container py-14 grid grid-cols-1 md:grid-cols-5 gap-10">
         <div className="md:col-span-2">
-          <h3 className="font-display text-2xl uppercase tracking-widest mb-3">Clothify</h3>
+          <h3 className="font-display text-2xl uppercase tracking-widest mb-3">Men's point</h3>
           <p className="text-sm text-cream/60 max-w-xs mb-5">
             Style for every wardrobe — men, women and kids. Join our list for first access to new
             drops and exclusive offers.
@@ -84,7 +84,7 @@ export function Footer() {
       </div>
       <div className="border-t border-charcoal-800">
         <div className="container py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-cream/50">
-          <p>&copy; {new Date().getFullYear()} Clothify. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Men's point. All rights reserved.</p>
           <div className="flex gap-4">
             <span>Instagram</span>
             <span>Facebook</span>

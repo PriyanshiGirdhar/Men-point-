@@ -32,7 +32,7 @@ export default function SignupPage() {
   return (
     <div className="w-full max-w-sm">
       <h1 className="section-heading text-2xl mb-1">Create Account</h1>
-      <p className="text-sm text-charcoal-500 mb-8">Join Clothify for faster checkout and order tracking.</p>
+      <p className="text-sm text-charcoal-500 mb-8">Join Men's point for faster checkout and order tracking.</p>
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <div>

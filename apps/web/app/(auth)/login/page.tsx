@@ -40,7 +40,7 @@ function LoginForm() {
   return (
     <div className="w-full max-w-sm">
       <h1 className="section-heading text-2xl mb-1">Sign In</h1>
-      <p className="text-sm text-charcoal-500 mb-8">Welcome back to Clothify.</p>
+      <p className="text-sm text-charcoal-500 mb-8">Welcome back to Men's point.</p>
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <div>
@@ -78,7 +78,7 @@ function LoginForm() {
       </form>
 
       <p className="text-sm text-charcoal-500 mt-6 text-center">
-        New to Clothify?{' '}
+        New to Men's point?{' '}
         <Link href="/signup" className="font-semibold text-charcoal-900 underline">
           Create an account
         </Link>

@@ -1,6 +1,7 @@
 import type { Category } from './types';
+import { resolveApiUrl } from './api';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+const API_URL = resolveApiUrl();
 
 /** Best-effort server-side fetch for public data used in layouts (e.g. nav categories). */
 export async function fetchCategoriesServer(): Promise<Category[]> {

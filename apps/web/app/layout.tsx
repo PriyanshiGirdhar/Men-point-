@@ -18,9 +18,9 @@ const body = Inter({
 });
 
 export const metadata: Metadata = {
-  title: 'Clothify — Fashion for Men, Women & Kids',
+  title: "Men's point — Fashion for Men, Women & Kids",
   description:
-    'Clothify is a style-forward clothing destination for men, women and kids — curated collections, everyday essentials and statement pieces.',
+    "Men's point is a style-forward clothing destination for men, women and kids — curated collections, everyday essentials and statement pieces.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

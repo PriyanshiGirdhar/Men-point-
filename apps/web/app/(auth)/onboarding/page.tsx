@@ -101,7 +101,7 @@ export default function OnboardingPage() {
           </div>
           <h1 className="section-heading text-2xl mb-2">You&apos;re all set!</h1>
           <p className="text-sm text-charcoal-500 mb-8">
-            Your Clothify homepage is ready. Let&apos;s find something you&apos;ll love.
+            Your Men's point homepage is ready. Let&apos;s find something you&apos;ll love.
           </p>
           <Link href="/" className="btn-primary">
             Start Shopping

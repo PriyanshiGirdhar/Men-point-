@@ -51,7 +51,7 @@ export function Header({ categories }: { categories: Category[] }) {
         </button>
 
         <Link href="/" className="font-display text-2xl md:text-3xl font-bold tracking-widest uppercase shrink-0">
-          Clothify
+          Men's point
         </Link>
 
         <nav className="hidden lg:flex items-center gap-1 ml-4">

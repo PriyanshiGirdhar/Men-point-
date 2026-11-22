@@ -27,7 +27,7 @@ export function Hero() {
           <div className="relative w-64 sm:w-80 md:w-96 aspect-[3/4] rounded-t-full overflow-hidden shadow-2xl border-4 border-cream/40">
             <Image
               src="https://images.unsplash.com/photo-1732464517792-7385024242a6?auto=format&fit=crop&w=600&h=800&q=80"
-              alt="Model wearing a Clothify outfit"
+              alt="Model wearing a Men's point outfit"
               fill
               sizes="(min-width: 1024px) 24rem, 20rem"
               className="object-cover"

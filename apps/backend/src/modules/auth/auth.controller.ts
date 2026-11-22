@@ -15,12 +15,19 @@ const REFRESH_COOKIE_MAX_AGE_MS = 7 * 24 * 60 * 60 * 1000;
 export class AuthController {
   constructor(private readonly authService: AuthService) {}
 
+  private refreshCookieOptions() {
+    return {
+      httpOnly: true,
+      sameSite: 'lax' as const,
+      secure: process.env.NODE_ENV === 'production',
+      path: '/',
+    };
+  }
+
   private setRefreshCookie(res: Response, refreshToken: string) {
     res.cookie(REFRESH_COOKIE, refreshToken, {
-      httpOnly: true,
-      sameSite: 'lax',
+      ...this.refreshCookieOptions(),
       maxAge: REFRESH_COOKIE_MAX_AGE_MS,
-      path: '/',
     });
   }
 
@@ -51,7 +58,7 @@ export class AuthController {
   async logout(@Req() req: Request, @Res({ passthrough: true }) res: Response) {
     const rawToken = req.cookies?.[REFRESH_COOKIE];
     await this.authService.logout(rawToken);
-    res.clearCookie(REFRESH_COOKIE, { path: '/' });
+    res.clearCookie(REFRESH_COOKIE, this.refreshCookieOptions());
     return { success: true };
   }
 

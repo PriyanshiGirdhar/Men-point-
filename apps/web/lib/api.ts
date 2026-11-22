@@ -1,4 +1,14 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000/api';
+export function resolveApiUrl() {
+  if (process.env.NEXT_PUBLIC_API_URL) return process.env.NEXT_PUBLIC_API_URL.replace(/\/$/, '');
+  if (process.env.NODE_ENV !== 'production') return 'http://localhost:4000/api';
+  if (typeof window === 'undefined') {
+    const api = process.env.API_URL?.replace(/\/$/, '');
+    return api ? `${api}/api` : 'http://localhost:4000/api';
+  }
+  return '/api';
+}
+
+const API_URL = resolveApiUrl();
 
 // Module-level token store. auth-context.tsx reads/writes this via the
 // exported helpers so the fetch wrapper can attach + refresh it without a

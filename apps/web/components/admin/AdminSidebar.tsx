@@ -30,7 +30,7 @@ export function AdminSidebar() {
   return (
     <aside className="w-60 shrink-0 bg-charcoal-900 text-cream flex flex-col">
       <div className="px-5 py-6 border-b border-charcoal-700">
-        <span className="font-display text-lg uppercase tracking-widest">Clothify Admin</span>
+        <span className="font-display text-lg uppercase tracking-widest">Men's point Admin</span>
       </div>
 
       <nav className="flex-1 py-4">
