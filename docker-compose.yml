@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: clothify
+      POSTGRES_PASSWORD: clothify
+      POSTGRES_DB: clothify
+    ports:
+      - "5432:5432"
+    volumes:
+      - clothify_pgdata:/var/lib/postgresql/data
+
+volumes:
+  clothify_pgdata:
