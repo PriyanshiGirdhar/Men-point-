@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// Production API is proxied through /api when API_URL is set on Vercel.
 const nextConfig = {
   images: {
     remotePatterns: [
